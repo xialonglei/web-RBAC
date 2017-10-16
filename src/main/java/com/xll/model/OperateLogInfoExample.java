@@ -814,6 +814,286 @@ public class OperateLogInfoExample {
             addCriterion("login_out_time not between", value1, value2, "loginOutTime");
             return (Criteria) this;
         }
+
+        public Criteria andMethodCostTimeIsNull() {
+            addCriterion("method_cost_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeIsNotNull() {
+            addCriterion("method_cost_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeEqualTo(String value) {
+            addCriterion("method_cost_time =", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeNotEqualTo(String value) {
+            addCriterion("method_cost_time <>", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeGreaterThan(String value) {
+            addCriterion("method_cost_time >", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeGreaterThanOrEqualTo(String value) {
+            addCriterion("method_cost_time >=", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeLessThan(String value) {
+            addCriterion("method_cost_time <", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeLessThanOrEqualTo(String value) {
+            addCriterion("method_cost_time <=", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeLike(String value) {
+            addCriterion("method_cost_time like", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeNotLike(String value) {
+            addCriterion("method_cost_time not like", value, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeIn(List<String> values) {
+            addCriterion("method_cost_time in", values, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeNotIn(List<String> values) {
+            addCriterion("method_cost_time not in", values, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeBetween(String value1, String value2) {
+            addCriterion("method_cost_time between", value1, value2, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMethodCostTimeNotBetween(String value1, String value2) {
+            addCriterion("method_cost_time not between", value1, value2, "methodCostTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeIsNull() {
+            addCriterion("log_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeIsNotNull() {
+            addCriterion("log_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeEqualTo(String value) {
+            addCriterion("log_type =", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeNotEqualTo(String value) {
+            addCriterion("log_type <>", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeGreaterThan(String value) {
+            addCriterion("log_type >", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("log_type >=", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeLessThan(String value) {
+            addCriterion("log_type <", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeLessThanOrEqualTo(String value) {
+            addCriterion("log_type <=", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeLike(String value) {
+            addCriterion("log_type like", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeNotLike(String value) {
+            addCriterion("log_type not like", value, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeIn(List<String> values) {
+            addCriterion("log_type in", values, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeNotIn(List<String> values) {
+            addCriterion("log_type not in", values, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeBetween(String value1, String value2) {
+            addCriterion("log_type between", value1, value2, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogTypeNotBetween(String value1, String value2) {
+            addCriterion("log_type not between", value1, value2, "logType");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriIsNull() {
+            addCriterion("uri is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriIsNotNull() {
+            addCriterion("uri is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriEqualTo(String value) {
+            addCriterion("uri =", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriNotEqualTo(String value) {
+            addCriterion("uri <>", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriGreaterThan(String value) {
+            addCriterion("uri >", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriGreaterThanOrEqualTo(String value) {
+            addCriterion("uri >=", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriLessThan(String value) {
+            addCriterion("uri <", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriLessThanOrEqualTo(String value) {
+            addCriterion("uri <=", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriLike(String value) {
+            addCriterion("uri like", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriNotLike(String value) {
+            addCriterion("uri not like", value, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriIn(List<String> values) {
+            addCriterion("uri in", values, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriNotIn(List<String> values) {
+            addCriterion("uri not in", values, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriBetween(String value1, String value2) {
+            addCriterion("uri between", value1, value2, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andUriNotBetween(String value1, String value2) {
+            addCriterion("uri not between", value1, value2, "uri");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodIsNull() {
+            addCriterion("mehod is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodIsNotNull() {
+            addCriterion("mehod is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodEqualTo(String value) {
+            addCriterion("mehod =", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodNotEqualTo(String value) {
+            addCriterion("mehod <>", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodGreaterThan(String value) {
+            addCriterion("mehod >", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodGreaterThanOrEqualTo(String value) {
+            addCriterion("mehod >=", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodLessThan(String value) {
+            addCriterion("mehod <", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodLessThanOrEqualTo(String value) {
+            addCriterion("mehod <=", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodLike(String value) {
+            addCriterion("mehod like", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodNotLike(String value) {
+            addCriterion("mehod not like", value, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodIn(List<String> values) {
+            addCriterion("mehod in", values, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodNotIn(List<String> values) {
+            addCriterion("mehod not in", values, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodBetween(String value1, String value2) {
+            addCriterion("mehod between", value1, value2, "mehod");
+            return (Criteria) this;
+        }
+
+        public Criteria andMehodNotBetween(String value1, String value2) {
+            addCriterion("mehod not between", value1, value2, "mehod");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

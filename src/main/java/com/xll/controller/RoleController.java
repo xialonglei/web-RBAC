@@ -1,5 +1,6 @@
 package com.xll.controller;
 
+import com.xll.annotation.SystemLog;
 import com.xll.enums.PageEnum;
 import com.xll.model.Role;
 import com.xll.service.RoleService;
@@ -21,6 +22,7 @@ public class RoleController {
     @Resource
     private RoleService roleService;
 
+    @SystemLog(description = "获取角色列表")
     @RequestMapping(value = "/getRoleList" , method = RequestMethod.POST)
     @ResponseBody
     public BootstrapTablePage<Role> getRoleList(@RequestBody BootstrapTablePage bootstrapTablePage) {
@@ -32,6 +34,7 @@ public class RoleController {
         return bootstrapTablePage;
     }
 
+    @SystemLog(description = "角色管理")
     @RequestMapping(value = "/roleMgmt" , method = RequestMethod.GET)
     public String roleMgmtPage(HttpServletRequest request) {
         request.setAttribute("page" , PageEnum.ROLE_LIST.getCode());

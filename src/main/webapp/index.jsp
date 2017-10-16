@@ -32,25 +32,19 @@
                         <li><a href="/index.jsp">首页</a></li>
                     </ul>
                     <p class="navbar-text navbar-right">Hi
-                    <c:choose>
 
-                        <c:when test="${sessionScope.user.isAdmin}">
+                        <c:if test="${sessionScope.user.isAdmin}">
                             <a href="javascript:void(0)" class="navbar-link">超级管理员(${sessionScope.user.name})</a>
-                        </c:when>
+                        </c:if>
 
-                        <c:otherwise>
+                        <c:if test="${sessionScope.user.name != null && !sessionScope.user.isAdmin}">
+                            <a href="javascript:void(0)" class="navbar-link">${sessionScope.user.name}</a>
+                        </c:if>
 
-                            <c:if test="${sessionScope.user.name}">
-                                <a href="javascript:void(0)" class="navbar-link">${sessionScope.user.name}</a>
-                            </c:if>
+                        <c:if test="${sessionScope.user.name == null}">
+                            <a href="javascript:void(0)" class="navbar-link">请登录</a>
+                        </c:if>
 
-                            <c:if test="${sessionScope.user.name == null}">
-                                <a href="javascript:void(0)" class="navbar-link">请登录</a>
-                            </c:if>
-
-                        </c:otherwise>
-
-                    </c:choose>
                     </p>
                 </div>
             </div>

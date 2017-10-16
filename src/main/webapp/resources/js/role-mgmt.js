@@ -7,7 +7,7 @@ $(function () {
 
    initTable();
    
-   function initTable() {
+    function initTable() {
        $table.bootstrapTable({
            url: '/role/getRoleList',
            method: 'post',
@@ -72,10 +72,7 @@ $(function () {
                }
            }]
        });
-   };
-
-    //刷新bootstrap-table
-    $table.bootstrapTable('refresh');
+    };
 
     function formatDate(time) {
         var time = new Date(time);

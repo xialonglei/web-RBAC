@@ -25,6 +25,14 @@ public class OperateLogInfo {
 
     private Date loginOutTime;
 
+    private String methodCostTime;
+
+    private String logType;
+
+    private String uri;
+
+    private String method;
+
     public Integer getId() {
         return id;
     }
@@ -46,7 +54,7 @@ public class OperateLogInfo {
     }
 
     public void setUname(String uname) {
-        this.uname = uname == null ? null : uname.trim();
+        this.uname = uname == null ? "" : uname.trim();
     }
 
     public Date getCreateTime() {
@@ -78,7 +86,7 @@ public class OperateLogInfo {
     }
 
     public void setFromIp(String fromIp) {
-        this.fromIp = fromIp == null ? null : fromIp.trim();
+        this.fromIp = fromIp == null ? "" : fromIp.trim();
     }
 
     public String getOperateFunc() {
@@ -86,7 +94,7 @@ public class OperateLogInfo {
     }
 
     public void setOperateFunc(String operateFunc) {
-        this.operateFunc = operateFunc == null ? null : operateFunc.trim();
+        this.operateFunc = operateFunc == null ? "" : operateFunc.trim();
     }
 
     public String getVisitMethod() {
@@ -94,7 +102,7 @@ public class OperateLogInfo {
     }
 
     public void setVisitMethod(String visitMethod) {
-        this.visitMethod = visitMethod == null ? null : visitMethod.trim();
+        this.visitMethod = visitMethod == null ? "" : visitMethod.trim();
     }
 
     public String getVisitMethodErrorInfo() {
@@ -102,7 +110,7 @@ public class OperateLogInfo {
     }
 
     public void setVisitMethodErrorInfo(String visitMethodErrorInfo) {
-        this.visitMethodErrorInfo = visitMethodErrorInfo == null ? null : visitMethodErrorInfo.trim();
+        this.visitMethodErrorInfo = visitMethodErrorInfo == null ? "" : visitMethodErrorInfo.trim();
     }
 
     public Date getLoginOutTime() {
@@ -111,5 +119,37 @@ public class OperateLogInfo {
 
     public void setLoginOutTime(Date loginOutTime) {
         this.loginOutTime = loginOutTime;
+    }
+
+    public String getMethodCostTime() {
+        return methodCostTime;
+    }
+
+    public void setMethodCostTime(String methodCostTime) {
+        this.methodCostTime = methodCostTime == null ? "" : methodCostTime.trim();
+    }
+
+    public String getLogType() {
+        return logType;
+    }
+
+    public void setLogType(String logType) {
+        this.logType = logType == null ? "" : logType.trim();
+    }
+
+    public String getUri() {
+        return uri;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri == null ? "" : uri.trim();
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method == null ? "" : method.trim();
     }
 }
