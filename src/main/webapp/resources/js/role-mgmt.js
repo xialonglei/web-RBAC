@@ -3,9 +3,12 @@
  */
 
 $(function () {
-   var $table = $('#role-list');
+    var $table = $('#role-list');
 
-   initTable();
+    initTable();
+
+    initClick();
+
    
     function initTable() {
        $table.bootstrapTable({
@@ -73,6 +76,15 @@ $(function () {
            }]
        });
     };
+
+    function initClick() {
+
+        $('add-role').click(function () {
+            var roleName = $('#role-name').val();
+            var status = $("input[name='role-status']:checked").val();
+        });
+
+    }
 
     function formatDate(time) {
         var time = new Date(time);
