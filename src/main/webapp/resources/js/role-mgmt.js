@@ -5,9 +5,28 @@
 $(function () {
     var $table = $('#role-list');
 
+    initToastr();
+
     initTable();
 
     initClick();
+    
+    function initToastr() {
+        toastr.options = {
+            "closeButton": false , //是否显示关闭按钮
+            "debug": false , //是否使用debug模式
+            "positionClass": "toast-top-center" , //弹出窗的位置
+            "showDuration": "300" , //显示的动画时间
+            "hideDuration": "1000" , //消失的动画时间
+            "timeOut": "2000" , //展现时间
+            "extendedTimeOut": "1000" , //加长展示时间
+            "showEasing": "swing" ,  //显示时的动画缓冲方式
+            "hideEasing": "linear" , //消失时的动画缓冲方式
+            "showMethod": "fadeIn" , //显示时的动画方式
+            "hideMethod": "fadeOut"  //消失时的动画方式
+        };
+    }
+    
 
    
     function initTable() {
@@ -21,9 +40,9 @@ $(function () {
            clickToSelect: true,
            sidePagination: 'server',
            pageNumber: 1,
-           pageSize: 2,
-           height:300,
-           pageList: [2, 4, 6, 8],
+           pageSize: 5,
+           height:500,
+           pageList: [5 , 10 , 20 , 50],
            singleSelect: false,
            columns: [{
                field: 'state',
@@ -79,9 +98,35 @@ $(function () {
 
     function initClick() {
 
-        $('add-role').click(function () {
+        $('.add-role').click(function () {
+
+            $('#addModal').modal('hide');
+
             var roleName = $('#role-name').val();
             var status = $("input[name='role-status']:checked").val();
+
+            if (roleName == undefined || roleName == "") {
+                toastr.warning("角色名不能为空!");
+                return;
+            }
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/role/add' ,
+                data: JSON.stringify({
+                    name : roleName ,
+                    status : status == 1 ? true : false
+                }) ,
+                contentType : 'application/json' ,
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        toastr.error(res.msg);
+                    } else {
+                        toastr.info(res.msg);
+                    }
+                }
+            });
         });
 
     }

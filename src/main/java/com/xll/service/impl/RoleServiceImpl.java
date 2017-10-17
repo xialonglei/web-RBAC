@@ -40,4 +40,25 @@ public class RoleServiceImpl implements RoleService {
     public int countRole() {
         return roleDao.countByExample(new RoleExample());
     }
+
+    @Override
+    public int insert(Role role) {
+        return roleDao.insertSelective(role);
+    }
+
+    @Override
+    public Role getRoleByName(Role role) {
+
+        RoleExample roleExample = new RoleExample();
+        RoleExample.Criteria criteria = roleExample.createCriteria();
+        criteria.andNameEqualTo(role.getName());
+
+        List<Role> roleList = roleDao.selectByExample(roleExample);
+
+        if (roleList == null || roleList.size() == 0) {
+            return null;
+        }
+
+        return roleList.get(0);
+    }
 }

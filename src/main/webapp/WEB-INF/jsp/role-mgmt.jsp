@@ -8,9 +8,11 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="/resources/bootstrap/css/bootstrap-table.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/toastr.min.css" />
         <script type="text/javascript" src="/resources/bootstrap/js/bootstrap-table.js"></script>
         <script type="text/javascript" src="/resources/bootstrap/js/bootstrap-table-zh-CN.js"></script>
         <script type="text/javascript" src="/resources/js/role-mgmt.js"></script>
+        <script type="text/javascript" src="/resources/js/toastr.min.js"></script>
     </head>
 
     <body>
