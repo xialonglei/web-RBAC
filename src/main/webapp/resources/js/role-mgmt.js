@@ -3,6 +3,7 @@
  */
 
 $(function () {
+
     var $table = $('#role-list');
 
     initToastr();
@@ -26,9 +27,7 @@ $(function () {
             "hideMethod": "fadeOut"  //消失时的动画方式
         };
     }
-    
 
-   
     function initTable() {
        $table.bootstrapTable({
            url: '/role/getRoleList',
@@ -37,7 +36,7 @@ $(function () {
            contentType:'application/json',
            pagination: true,
            striped: true,
-           clickToSelect: true,
+           clickToSelect: false,
            sidePagination: 'server',
            pageNumber: 1,
            pageSize: 5,
@@ -90,7 +89,7 @@ $(function () {
                        'onclick="modify(\'' + id + '\')">' + '编辑' +
                        '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
                        '<button class="btn btn-xs btn-danger" ' +
-                       'onclick="delete(\'' + id + '\')">' + '删除' + '</button>';
+                       'onclick="deleteRole(\'' + id + '\')">' + '删除' + '</button>';
                }
            }]
        });
@@ -100,8 +99,6 @@ $(function () {
 
         $('.add-role').click(function () {
 
-            $('#addModal').modal('hide');
-
             var roleName = $('#role-name').val();
             var status = $("input[name='role-status']:checked").val();
 
@@ -109,6 +106,8 @@ $(function () {
                 toastr.warning("角色名不能为空!");
                 return;
             }
+
+            $('#addModal').modal('hide');
 
             $.ajax({
                 type: 'POST' ,
@@ -124,9 +123,70 @@ $(function () {
                         toastr.error(res.msg);
                     } else {
                         toastr.info(res.msg);
+                        $table.bootstrapTable('refresh');
                     }
                 }
             });
+        });
+
+        $('.edit-role').click(function () {
+
+            var roleName = $('#edit-role-name').val();
+            var status = $("input[name='edit-role-status']:checked").val();
+            var id = $('#edit-role-id').val();
+
+            if (roleName == undefined || roleName == "") {
+                toastr.warning("角色名不能为空!");
+                return;
+            }
+
+            $('#editModal').modal('hide');
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/role/update' ,
+                data: JSON.stringify({
+                    id : id ,
+                    name : roleName ,
+                    status : status == 1 ? true : false
+                }) ,
+                contentType : 'application/json' ,
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        toastr.error(res.msg);
+                    } else {
+                        toastr.info(res.msg);
+                        $table.bootstrapTable('refresh');
+                    }
+                }
+            });
+        });
+
+        $('.delete-role').click(function () {
+
+            var id = $('#delete-role-id').val();
+
+            $('#delcfmModel').modal('hide');
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/role/delete' ,
+                data: JSON.stringify({
+                    id : id
+                }) ,
+                contentType : 'application/json' ,
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        toastr.error(res.msg);
+                    } else {
+                        toastr.info(res.msg);
+                        $table.bootstrapTable('refresh');
+                    }
+                }
+            });
+
         });
 
     }
@@ -145,5 +205,37 @@ $(function () {
     function add0(m) {
         return m < 10 ? '0' + m : m;
     }
-
 });
+
+function modify(id) {
+
+    $.ajax({
+        type: 'POST' ,
+        url: '/role/getById' ,
+        data: JSON.stringify({
+            id : id
+        }) ,
+        contentType : 'application/json' ,
+        dataType: 'json' ,
+        success: function (res) {
+            if (res.code != 200) {
+                toastr.error(res.msg);
+            } else {
+                $('#edit-role-name').val(res.data.name);
+                $('#edit-role-id').val(res.data.id);
+                if (res.data.status) {
+                    $("input[name='edit-role-status'][value='1']").attr("checked",true);
+                } else {
+                    $("input[name='edit-role-status'][value='0']").attr("checked",true);
+                }
+
+                $('#editModal').modal('show');
+            }
+        }
+    });
+}
+
+function deleteRole(id) {
+    $('#delete-role-id').val(id);
+    $('#delcfmModel').modal('show');
+}

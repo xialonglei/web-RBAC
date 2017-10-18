@@ -48,11 +48,11 @@ public class RoleController {
     @RequestMapping(value = "/add" , method = RequestMethod.POST)
     public GeneralResponse<Integer> add(HttpServletRequest request , @RequestBody Role role) {
 
-        Role roleForName = roleService.getRoleByName(role);
+        Role result = roleService.getRoleByName(role);
 
-        if (roleForName != null) {
-            return new GeneralResponse<>(ResponseEnum.INSERT_ROLE_NAME_DUPLICATION.getName()
-                    , ResponseEnum.INSERT_ROLE_NAME_DUPLICATION.getCode());
+        if (result != null) {
+            return new GeneralResponse<>(ResponseEnum.INSERT_OR_UPDATE_ROLE_NAME_DUPLICATION.getName()
+                    , ResponseEnum.INSERT_OR_UPDATE_ROLE_NAME_DUPLICATION.getCode());
         }
 
         int count = roleService.insert(role);
@@ -64,4 +64,64 @@ public class RoleController {
         return new GeneralResponse<>(ResponseEnum.INSERT_SUCCESS.getName() , ResponseEnum.INSERT_SUCCESS.getCode());
 
     }
+
+
+    @SystemLog(description = "更新角色")
+    @ResponseBody
+    @RequestMapping(value = "/update" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> update(HttpServletRequest request , @RequestBody Role role) {
+        Role result = roleService.getRoleByNameAndStatus(role);
+
+        if (result != null) {
+            return new GeneralResponse<>(ResponseEnum.INSERT_OR_UPDATE_ROLE_NAME_DUPLICATION.getName()
+                    , ResponseEnum.INSERT_OR_UPDATE_ROLE_NAME_DUPLICATION.getCode());
+        }
+
+        int count = roleService.update(role);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.UPDATE_FAIL.getName() , ResponseEnum.UPDATE_FAIL.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.UPDATE_SUCCESS.getName() , ResponseEnum.UPDATE_SUCCESS.getCode());
+
+    }
+
+    @SystemLog(description = "根据ID获取角色")
+    @ResponseBody
+    @RequestMapping(value = "/getById" , method = RequestMethod.POST)
+    public GeneralResponse<Role> getById(HttpServletRequest request , @RequestBody Role role) {
+
+        Role result = roleService.getRoleById(role);
+
+        GeneralResponse generalResponse = new GeneralResponse();
+
+        if (result == null) {
+            generalResponse.setCode(ResponseEnum.SELECT_FAIL.getCode());
+            generalResponse.setMsg(ResponseEnum.SELECT_FAIL.getName());
+            return generalResponse;
+        }
+
+        generalResponse.setCode(ResponseEnum.SELECT_SUCCESS.getCode());
+        generalResponse.setMsg(ResponseEnum.SELECT_SUCCESS.getName());
+        generalResponse.setData(result);
+
+        return generalResponse;
+
+    }
+
+    @SystemLog(description = "删除角色")
+    @ResponseBody
+    @RequestMapping(value = "/delete" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> delete(@RequestBody Role role) {
+        int count = roleService.delete(role);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.DELETE_FAIL.getName() , ResponseEnum.DELETE_FAIL.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.DELETE_SUCCESS.getName() , ResponseEnum.DELETE_SUCCESS.getCode());
+    }
+
+
 }

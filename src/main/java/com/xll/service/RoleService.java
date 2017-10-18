@@ -17,4 +17,12 @@ public interface RoleService {
 
     /** 通过角色名来查找角色记录，角色也是唯一的 */
     Role getRoleByName(Role role);
+
+    Role getRoleById(Role role);
+
+    int update(Role role);
+
+    int delete(Role role);
+
+    Role getRoleByNameAndStatus(Role role);
 }

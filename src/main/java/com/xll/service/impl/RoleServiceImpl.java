@@ -61,4 +61,41 @@ public class RoleServiceImpl implements RoleService {
 
         return roleList.get(0);
     }
+
+    @Override
+    public Role getRoleById(Role role) {
+
+        return roleDao.selectByPrimaryKey(role.getId());
+
+    }
+
+    @Override
+    public int update(Role role) {
+
+        return roleDao.updateByPrimaryKeySelective(role);
+
+    }
+
+    @Override
+    public int delete(Role role) {
+        int count = roleDao.deleteByPrimaryKey(role.getId());
+        return count;
+    }
+
+    @Override
+    public Role getRoleByNameAndStatus(Role role) {
+
+        RoleExample roleExample = new RoleExample();
+        RoleExample.Criteria criteria = roleExample.createCriteria();
+        criteria.andNameEqualTo(role.getName());
+        criteria.andStatusEqualTo(role.getStatus());
+
+        List<Role> roleList = roleDao.selectByExample(roleExample);
+
+        if (roleList == null || roleList.size() == 0) {
+            return null;
+        }
+
+        return roleList.get(0);
+    }
 }

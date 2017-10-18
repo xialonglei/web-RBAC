@@ -21,6 +21,8 @@ public class GeneralResponse<T> {
         this.code = code;
     }
 
+    public GeneralResponse() {}
+
     public void setData(T data) {
         this.data = data;
     }
