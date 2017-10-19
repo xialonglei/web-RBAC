@@ -109,4 +109,14 @@ public class UserServiceImpl implements UserService {
 
         return userList.get(0);
     }
+
+    @Override
+    public User getById(Integer id) {
+        return userDao.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int update(User user) {
+        return userDao.updateByPrimaryKeySelective(user);
+    }
 }

@@ -91,10 +91,31 @@
                             <div class="row">
                                 <label class="control-label col-sm-2">用户名</label>
                                 <input id="edit-user-name" class="form-control col-sm-9"/>
+                                <p class="edit-name-img"></p>
                             </div>
                         </div>
 
                         <input type="hidden" id="edit-user-id" />
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label class="control-label col-sm-3">管理员</label>
+                                <label class="radio-inline col-xs-4 col-sm-4">
+                                    <input type="radio" name="edit-is-admin" value="1" checked>是
+                                </label>
+                                <label class="radio-inline col-xs-4 col-sm-4">
+                                    <input type="radio" name="edit-is-admin" value="0">否
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label class="control-label col-sm-2">邮箱</label>
+                                <input type="email" id="edit-user-email" class="form-control col-sm-9"/>
+                                <p class="edit-email-img"></p>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="row">
@@ -111,7 +132,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-default edit-close" data-dismiss="modal">关闭</button>
                         <button type="button" class="btn btn-primary edit-user">确定</button>
                     </div>
                 </div>

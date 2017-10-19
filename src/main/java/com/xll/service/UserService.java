@@ -23,4 +23,8 @@ public interface UserService {
 
     User getByEmail(String email);
 
+    User getById(Integer id);
+
+    int update(User user);
+
 }

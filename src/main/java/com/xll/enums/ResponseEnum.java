@@ -15,6 +15,8 @@ public enum ResponseEnum {
     DELETE_SUCCESS("删除成功" , 200) ,
     DELETE_FAIL("删除失败" , -401) ,
     INSERT_NAME_OR_EMAIL_DUPLICATION("插入重复用户名或邮箱" , -501) ,
+    UPDATE_NAME_DUPLICATION("更新的用户名已存在" , -601) ,
+    UPDATE_EMAIL_DUPLICATION("更新的用户邮箱已存在" , -701) ,
     OK("成功" , 200);
 
     private String name;

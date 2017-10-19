@@ -122,4 +122,80 @@ public class UserController {
         return new GeneralResponse<>(ResponseEnum.OK.getName() , ResponseEnum.OK.getCode());
 
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/getById" , method = RequestMethod.POST)
+    public GeneralResponse<User> getById(HttpServletRequest request
+           , @RequestParam Integer id) {
+
+        User result = userService.getById(id);
+
+        GeneralResponse generalResponse = new GeneralResponse();
+
+        if (result == null) {
+            generalResponse.setCode(ResponseEnum.SELECT_FAIL.getCode());
+            generalResponse.setMsg(ResponseEnum.SELECT_FAIL.getName());
+            return generalResponse;
+        }
+
+        generalResponse.setCode(ResponseEnum.SELECT_SUCCESS.getCode());
+        generalResponse.setMsg(ResponseEnum.SELECT_SUCCESS.getName());
+        generalResponse.setData(result);
+
+        return generalResponse;
+
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/checkUpdateName" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> checkUpdateName(HttpServletRequest request
+            , @RequestParam Integer id , @RequestParam String name) {
+
+        User user = userService.getByName(name);
+
+        if (user != null && user.getId() != id) {
+            return new GeneralResponse<>(ResponseEnum.UPDATE_NAME_DUPLICATION.getName()
+                    , ResponseEnum.UPDATE_NAME_DUPLICATION.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.OK.getName() , ResponseEnum.OK.getCode());
+
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/checkUpdateEmail" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> checkUpdateEmail(HttpServletRequest request
+            , @RequestParam Integer id , @RequestParam String email) {
+
+        User user = userService.getByEmail(email);
+
+        if (user != null && user.getId() != id) {
+            return new GeneralResponse<>(ResponseEnum.UPDATE_EMAIL_DUPLICATION.getName()
+                    , ResponseEnum.UPDATE_EMAIL_DUPLICATION.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.OK.getName() , ResponseEnum.OK.getCode());
+
+    }
+
+
+    @SystemLog(description = "更新用户")
+    @ResponseBody
+    @RequestMapping(value = "/update" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> update(HttpServletRequest request , @RequestBody User user) {
+
+        int count = userService.update(user);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.UPDATE_FAIL.getName() , ResponseEnum.UPDATE_FAIL.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.UPDATE_SUCCESS.getName() , ResponseEnum.UPDATE_SUCCESS.getCode());
+
+    }
+
+
+
+
+
 }

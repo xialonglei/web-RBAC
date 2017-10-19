@@ -8,6 +8,8 @@ $(function () {
 
     var insertCheck = true;
 
+    var updateCheck = true;
+
     initToastr();
 
     initTable();
@@ -162,24 +164,41 @@ $(function () {
 
         $('.edit-user').click(function () {
 
-            var userName = $('#edit-user-name').val();
+            if (!updateCheck) {
+                toastr.warning('参数校验不通过！');
+                return;
+            }
+
+            var name = $('#edit-user-name').val();
             var status = $("input[name='edit-user-status']:checked").val();
             var id = $('#edit-user-id').val();
+            var isAdmin = $("input[name='edit-is-admin']:checked").val();
+            var email = $('#edit-user-email').val();
 
-            if (userName == undefined || userName == "") {
-                toastr.warning("角色名不能为空!");
+            if (name == undefined || name == "") {
+                toastr.warning("用户名不能为空!");
+                return;
+            }
+
+            if (email == undefined || email == "") {
+                toastr.warning("用户邮箱不能为空!");
                 return;
             }
 
             $('#editModal').modal('hide');
+
+            $('.edit-name-img').empty();
+            $('.edit-email-img').empty();
 
             $.ajax({
                 type: 'POST' ,
                 url: '/user/update' ,
                 data: JSON.stringify({
                     id : id ,
-                    name : userName ,
-                    status : status == 1 ? true : false
+                    name : name ,
+                    status : status == 1 ? true : false ,
+                    isAdmin : isAdmin == 1 ? true : false ,
+                    email : email
                 }) ,
                 contentType : 'application/json' ,
                 dataType: 'json' ,
@@ -218,6 +237,11 @@ $(function () {
                 }
             });
 
+        });
+
+        $('.edit-close').click(function () {
+            $('.edit-name-img').empty();
+            $('.edit-email-img').empty();
         });
 
     }
@@ -287,6 +311,71 @@ $(function () {
             });
 
         });
+
+        $('#edit-user-name').blur(function () {
+
+            $('.edit-name-img').empty();
+
+            var name = $('#edit-user-name').val();
+            var id = $('#edit-user-id').val();
+
+            if (name == undefined || name == null || name == '') {
+                return;
+            }
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/user/checkUpdateName' ,
+                data: {name : name , id : id},
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        updateCheck = false;
+                        $('.edit-name-img').append('<img src="/resources/images/wrong.png" width="20px" height="20px"/>');
+                        toastr.error(res.msg);
+                    } else {
+                        updateCheck = true;
+                        $('.edit-name-img').append('<img src="/resources/images/right.png" width="20px" height="20px"/>');
+                    }
+                }
+            });
+
+        });
+
+        $('#edit-user-email').blur(function () {
+
+            $('.edit-email-img').empty();
+
+            var email = $('#edit-user-email').val();
+            var id = $('#edit-user-id').val();
+
+            if (email == undefined || email == null || email == '') {
+                return;
+            }
+
+            if (!isEmail(email)) {
+                toastr.warning("邮箱格式不正确！");
+                return;
+            }
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/user/checkUpdateEmail' ,
+                data: {email : email , id : id},
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        updateCheck = false;
+                        $('.edit-email-img').append('<img src="/resources/images/wrong.png" width="20px" height="20px"/>');
+                        toastr.error(res.msg);
+                    } else {
+                        updateCheck = true;
+                        $('.edit-email-img').append('<img src="/resources/images/right.png" width="20px" height="20px"/>');
+                    }
+                }
+            });
+
+        });
     }
 
     function isEmail(strEmail) {
@@ -318,21 +407,25 @@ function modify(id) {
     $.ajax({
         type: 'POST' ,
         url: '/user/getById' ,
-        data: JSON.stringify({
-            id : id
-        }) ,
-        contentType : 'application/json' ,
+        data: {id : id} ,
         dataType: 'json' ,
         success: function (res) {
             if (res.code != 200) {
                 toastr.error(res.msg);
             } else {
                 $('#edit-user-name').val(res.data.name);
+                $('#edit-user-email').val(res.data.email);
                 $('#edit-user-id').val(res.data.id);
                 if (res.data.status) {
                     $("input[name='edit-user-status'][value='1']").attr("checked",true);
                 } else {
                     $("input[name='edit-user-status'][value='0']").attr("checked",true);
+                }
+
+                if (res.data.isAdmin) {
+                    $("input[name='edit-is-admin'][value='1']").attr("checked",true);
+                } else {
+                    $("input[name='edit-is-admin'][value='0']").attr("checked",true);
                 }
 
                 $('#editModal').modal('show');
