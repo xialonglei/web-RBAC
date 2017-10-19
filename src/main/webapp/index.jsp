@@ -60,7 +60,7 @@
                     <li><a href="javascript:void(0)">测试页面三</a></li>
                     <li><a href="javascript:void(0)">测试页面四</a></li>
                     <li>系统设置</li>
-                    <li><a href="javascript:void(0)">用户管理</a></li>
+                    <li><a href="/user/userMgmt">用户管理</a></li>
                     <li><a href="/role/roleMgmt">角色管理</a></li>
                     <li><a href="javascript:void(0)">权限管理</a></li>
                 </ul>
@@ -74,6 +74,10 @@
 
                 <c:if test="${requestScope.page == 0}">
                     <%@ include file="/WEB-INF/jsp/rbac.jsp"%>
+                </c:if>
+
+                <c:if test="${requestScope.page == 10}">
+                    <%@ include file="/WEB-INF/jsp/user-mgmt.jsp"%>
                 </c:if>
 
                 <c:if test="${requestScope.page == 20}">

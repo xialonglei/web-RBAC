@@ -13,7 +13,9 @@ public enum ResponseEnum {
     SELECT_SUCCESS("查询成功" , 200) ,
     SELECT_FAIL("查询失败" , -301) ,
     DELETE_SUCCESS("删除成功" , 200) ,
-    DELETE_FAIL("删除失败" , -401);
+    DELETE_FAIL("删除失败" , -401) ,
+    INSERT_NAME_OR_EMAIL_DUPLICATION("插入重复用户名或邮箱" , -501) ,
+    OK("成功" , 200);
 
     private String name;
     private int code;
