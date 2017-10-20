@@ -11,6 +11,8 @@ $(function () {
     initTable();
 
     initClick();
+
+    initModal();
     
     function initToastr() {
         toastr.options = {
@@ -189,6 +191,19 @@ $(function () {
 
         });
 
+    }
+
+    function initModal() {
+
+        $('#addModal').draggable({
+            cursor: "move",
+            handle: '.modal-header'
+        });
+
+        $('#editModal').draggable({
+            cursor: "move",
+            handle: '.modal-header'
+        });
     }
 
     function formatDate(time) {

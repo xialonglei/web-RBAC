@@ -195,6 +195,20 @@ public class UserController {
     }
 
 
+    @SystemLog(description = "删除用户")
+    @ResponseBody
+    @RequestMapping(value = "/delete" , method = RequestMethod.POST)
+    public GeneralResponse<Integer> delete(HttpServletRequest request , @RequestParam Integer id) {
+        int count = userService.delete(id);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.DELETE_FAIL.getName() , ResponseEnum.DELETE_FAIL.getCode());
+        }
+
+        return new GeneralResponse<>(ResponseEnum.DELETE_SUCCESS.getName() , ResponseEnum.DELETE_SUCCESS.getCode());
+    }
+
+
 
 
 

@@ -17,6 +17,8 @@ $(function () {
     initClick();
 
     initEvent();
+
+    initModal();
     
     function initToastr() {
         toastr.options = {
@@ -222,10 +224,7 @@ $(function () {
             $.ajax({
                 type: 'POST' ,
                 url: '/user/delete' ,
-                data: JSON.stringify({
-                    id : id
-                }) ,
-                contentType : 'application/json' ,
+                data: {id : id} ,
                 dataType: 'json' ,
                 success: function (res) {
                     if (res.code != 200) {
@@ -375,6 +374,19 @@ $(function () {
                 }
             });
 
+        });
+    }
+
+    function initModal() {
+
+        $('#addModal').draggable({
+            cursor: "move",
+            handle: '.modal-header'
+        });
+
+        $('#editModal').draggable({
+            cursor: "move",
+            handle: '.modal-header'
         });
     }
 

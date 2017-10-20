@@ -68,7 +68,7 @@ public class SystemLogAspect {
     @Before("systemLogAspectCtrl()")
     public void doBefore(JoinPoint joinPoint) throws InterruptedException {
 
-        Date beginTime=new Date();
+        Date beginTime = new Date();
 
         BEGIN_TIME_THREAD_LOCAL.set(beginTime);
 
@@ -102,8 +102,6 @@ public class SystemLogAspect {
             operateLogInfo.setOperateFunc(getMethodDescription(joinPoint));
             operateLogInfo.setVisitMethod(getMethod(joinPoint));
             operateLogInfo.setMethodCostTime(new Date().getTime() - BEGIN_TIME_THREAD_LOCAL.get().getTime() + "");
-
-
 
             // 开启新线程进行日志记录
             taskExecutor.execute(new SaveLogThread(operateLogInfo , operateLogInfoService));
