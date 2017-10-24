@@ -59,7 +59,7 @@ $(function () {
                title: '权限'
            },{
                field: 'uris',
-               title: 'Uris'
+               title: 'Uris' ,
            },{
                field: 'status',
                title: '权限状态' ,
@@ -106,9 +106,10 @@ $(function () {
 
             var accessName = $('#access-name').val();
             var status = $("input[name='access-status']:checked").val();
+            var uris = $("#access-uris").val();
 
             if (accessName == undefined || accessName == "") {
-                toastr.warning("角色名不能为空!");
+                toastr.warning("权限名不能为空!");
                 return;
             }
 
@@ -118,8 +119,9 @@ $(function () {
                 type: 'POST' ,
                 url: '/access/add' ,
                 data: JSON.stringify({
-                    name : accessName ,
-                    status : status == 1 ? true : false
+                    title : accessName ,
+                    status : status == 1 ? true : false ,
+                    uris : uris
                 }) ,
                 contentType : 'application/json' ,
                 dataType: 'json' ,
@@ -139,6 +141,7 @@ $(function () {
             var accessName = $('#edit-access-name').val();
             var status = $("input[name='edit-access-status']:checked").val();
             var id = $('#edit-access-id').val();
+            var uris = $("#edit-access-uris").val();
 
             if (accessName == undefined || accessName == "") {
                 toastr.warning("角色名不能为空!");
@@ -152,8 +155,9 @@ $(function () {
                 url: '/access/update' ,
                 data: JSON.stringify({
                     id : id ,
-                    name : accessName ,
-                    status : status == 1 ? true : false
+                    title : accessName ,
+                    status : status == 1 ? true : false ,
+                    uris : uris
                 }) ,
                 contentType : 'application/json' ,
                 dataType: 'json' ,
@@ -239,8 +243,9 @@ function modify(id) {
             if (res.code != 200) {
                 toastr.error(res.msg);
             } else {
-                $('#edit-access-name').val(res.data.name);
+                $('#edit-access-name').val(res.data.title);
                 $('#edit-access-id').val(res.data.id);
+                $("#edit-access-uris").val(res.data.uris);
                 if (res.data.status) {
                     $("input[name='edit-access-status'][value='1']").attr("checked",true);
                 } else {

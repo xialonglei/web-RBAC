@@ -93,6 +93,7 @@
                 <c:if test="${sessionScope.user != null && requestScope.page == null}">
                     <%@ include file="/WEB-INF/jsp/rbac.jsp"%>
                 </c:if>
+
                 <hr/>
                 <footer>
                     <p class="pull-left">@编程少年夏小龙</p>

@@ -23,20 +23,27 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">添加角色</h4>
+                <h4 class="modal-title" id="myModalLabel">添加权限</h4>
             </div>
             <div class="modal-body">
 
                 <div class="form-group">
                     <div class="row">
-                        <label class="control-label col-sm-2">角色名</label>
-                        <input id="access-name" class="form-control col-sm-9" placeholder="输入角色名..." />
+                        <label class="control-label col-sm-2">权限TITLE</label>
+                        <input id="access-name" class="form-control col-sm-9" placeholder="输入权限名..." />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <label class="control-label col-sm-3">角色状态</label>
+                        <label class="control-label col-sm-4">Uris</label>
+                        <textarea placeholder="每行一个地址......" id="access-uris" class="form-control col-sm-offset-2 col-sm-9"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-3">权限状态</label>
                         <label class="radio-inline col-xs-4 col-sm-4">
                             <input type="radio" name="access-status" value="1" checked>有效
                         </label>
@@ -61,14 +68,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="editModalLabel">编辑角色</h4>
+                <h4 class="modal-title" id="editModalLabel">编辑权限</h4>
             </div>
             <div class="modal-body">
 
                 <div class="form-group">
                     <div class="row">
-                        <label class="control-label col-sm-2">角色名</label>
+                        <label class="control-label col-sm-2">权限名</label>
                         <input id="edit-access-name" class="form-control col-sm-9"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-4">Uris</label>
+                        <textarea id="edit-access-uris" class="form-control col-sm-offset-2 col-sm-9"></textarea>
                     </div>
                 </div>
 
@@ -76,7 +90,7 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <label class="control-label col-sm-3">角色状态</label>
+                        <label class="control-label col-sm-3">权限状态</label>
                         <label class="radio-inline col-xs-4 col-sm-4">
                             <input type="radio" name="edit-access-status" value="1" checked>有效
                         </label>

@@ -17,6 +17,7 @@ public enum ResponseEnum {
     INSERT_NAME_OR_EMAIL_DUPLICATION("插入重复用户名或邮箱" , -501) ,
     UPDATE_NAME_DUPLICATION("更新的用户名已存在" , -601) ,
     UPDATE_EMAIL_DUPLICATION("更新的用户邮箱已存在" , -701) ,
+    INSERT_OR_UPDATE_TITLE_DUPLICATION("插入或更新重复的权限TITLE" , -502) ,
     OK("成功" , 200);
 
     private String name;

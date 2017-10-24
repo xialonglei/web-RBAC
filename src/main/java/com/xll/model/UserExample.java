@@ -11,23 +11,23 @@ public class UserExample {
 
     protected List<Criteria> oredCriteria;
 
-    protected int pageSize;
+    protected Integer pageSize;
 
-    protected int offset;
+    protected Integer offset;
 
-    public int getPageSize() {
+    public Integer getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(int pageSize) {
+    public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
-    public int getOffset() {
+    public Integer getOffset() {
         return offset;
     }
 
-    public void setOffset(int offset) {
+    public void setOffset(Integer offset) {
         this.offset = offset;
     }
 

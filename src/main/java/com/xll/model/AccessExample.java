@@ -7,9 +7,9 @@ import java.util.List;
 public class AccessExample {
     protected String orderByClause;
 
-    protected int pageSize;
+    protected Integer pageSize;
 
-    protected int offset;
+    protected Integer offset;
 
     protected boolean distinct;
 
@@ -68,19 +68,19 @@ public class AccessExample {
         distinct = false;
     }
 
-    public void setPageSize(int pageSize) {
+    public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
-    public void setOffset(int offset) {
+    public void setOffset(Integer offset) {
         this.offset = offset;
     }
 
-    public int getPageSize() {
+    public Integer getPageSize() {
         return pageSize;
     }
 
-    public int getOffset() {
+    public Integer getOffset() {
         return offset;
     }
 

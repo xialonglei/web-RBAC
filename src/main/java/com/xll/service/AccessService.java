@@ -11,5 +11,15 @@ public interface AccessService {
 
     int countRole();
 
-    List<Access> getRoleListByPage(int limit, int offset);
+    List<Access> getAccessListByPage(int limit, int offset);
+
+    Access getAccessByTitle(Access access);
+
+    int insert(Access access);
+
+    int delete(Access access);
+
+    Access getAccessById(Access access);
+
+    int update(Access access);
 }
