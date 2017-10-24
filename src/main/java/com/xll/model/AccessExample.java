@@ -7,6 +7,10 @@ import java.util.List;
 public class AccessExample {
     protected String orderByClause;
 
+    protected int pageSize;
+
+    protected int offset;
+
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
@@ -62,6 +66,22 @@ public class AccessExample {
         oredCriteria.clear();
         orderByClause = null;
         distinct = false;
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public int getOffset() {
+        return offset;
     }
 
     protected abstract static class GeneratedCriteria {

@@ -64,7 +64,7 @@
                     <li>系统设置</li>
                     <li><a href="/user/userMgmt">用户管理</a></li>
                     <li><a href="/role/roleMgmt">角色管理</a></li>
-                    <li><a href="javascript:void(0)">权限管理</a></li>
+                    <li><a href="/access/accessMgmt">权限管理</a></li>
                 </ul>
             </div>
 
@@ -84,6 +84,10 @@
 
                 <c:if test="${requestScope.page == 20}">
                     <%@ include file="/WEB-INF/jsp/role-mgmt.jsp"%>
+                </c:if>
+
+                <c:if test="${requestScope.page == 30}">
+                    <%@ include file="/WEB-INF/jsp/access-mgmt.jsp"%>
                 </c:if>
 
                 <c:if test="${sessionScope.user != null && requestScope.page == null}">

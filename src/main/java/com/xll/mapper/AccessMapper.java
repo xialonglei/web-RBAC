@@ -2,8 +2,11 @@ package com.xll.mapper;
 
 import com.xll.model.Access;
 import com.xll.model.AccessExample;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
+@Repository("accessDao")
 public interface AccessMapper {
     int countByExample(AccessExample example);
 

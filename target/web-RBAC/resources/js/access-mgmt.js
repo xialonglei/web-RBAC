@@ -4,7 +4,7 @@
 
 $(function () {
 
-    var $table = $('#role-list');
+    var $table = $('#access-list');
 
     initToastr();
 
@@ -32,7 +32,7 @@ $(function () {
 
     function initTable() {
        $table.bootstrapTable({
-           url: '/role/getRoleList',
+           url: '/access/getAccessList',
            method: 'post',
            dataType: 'json',
            contentType:'application/json',
@@ -50,16 +50,19 @@ $(function () {
                checkbox: true
            },{
                field: 'id' ,
-               title: '角色ID' ,
+               title: '权限ID' ,
                formatter: function (value, row, index) {
                    return row.id;
                }
            },{
-               field: 'name',
-               title: '角色名'
+               field: 'title',
+               title: '权限'
+           },{
+               field: 'uris',
+               title: 'Uris'
            },{
                field: 'status',
-               title: '角色状态' ,
+               title: '权限状态' ,
                formatter:function(value , row , index) {
                    if (value) {
                        return "有效";
@@ -91,9 +94,7 @@ $(function () {
                        'onclick="modify(\'' + id + '\')">' + '编辑' +
                        '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
                        '<button class="btn btn-xs btn-danger" ' +
-                       'onclick="deleteRole(\'' + id + '\')">' + '删除' + '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
-                       '<button class="btn btn-xs btn-default" ' +
-                       'onclick="setAccess(\'' + id + '\')">' + '设置权限' + '</button>';
+                       'onclick="deleteAccess(\'' + id + '\')">' + '删除' + '</button>';
                }
            }]
        });
@@ -101,12 +102,12 @@ $(function () {
 
     function initClick() {
 
-        $('.add-role').click(function () {
+        $('.add-access').click(function () {
 
-            var roleName = $('#role-name').val();
-            var status = $("input[name='role-status']:checked").val();
+            var accessName = $('#access-name').val();
+            var status = $("input[name='access-status']:checked").val();
 
-            if (roleName == undefined || roleName == "") {
+            if (accessName == undefined || accessName == "") {
                 toastr.warning("角色名不能为空!");
                 return;
             }
@@ -115,9 +116,9 @@ $(function () {
 
             $.ajax({
                 type: 'POST' ,
-                url: '/role/add' ,
+                url: '/access/add' ,
                 data: JSON.stringify({
-                    name : roleName ,
+                    name : accessName ,
                     status : status == 1 ? true : false
                 }) ,
                 contentType : 'application/json' ,
@@ -133,13 +134,13 @@ $(function () {
             });
         });
 
-        $('.edit-role').click(function () {
+        $('.edit-access').click(function () {
 
-            var roleName = $('#edit-role-name').val();
-            var status = $("input[name='edit-role-status']:checked").val();
-            var id = $('#edit-role-id').val();
+            var accessName = $('#edit-access-name').val();
+            var status = $("input[name='edit-access-status']:checked").val();
+            var id = $('#edit-access-id').val();
 
-            if (roleName == undefined || roleName == "") {
+            if (accessName == undefined || accessName == "") {
                 toastr.warning("角色名不能为空!");
                 return;
             }
@@ -148,10 +149,10 @@ $(function () {
 
             $.ajax({
                 type: 'POST' ,
-                url: '/role/update' ,
+                url: '/access/update' ,
                 data: JSON.stringify({
                     id : id ,
-                    name : roleName ,
+                    name : accessName ,
                     status : status == 1 ? true : false
                 }) ,
                 contentType : 'application/json' ,
@@ -167,15 +168,15 @@ $(function () {
             });
         });
 
-        $('.delete-role').click(function () {
+        $('.delete-access').click(function () {
 
-            var id = $('#delete-role-id').val();
+            var id = $('#delete-access-id').val();
 
             $('#delcfmModel').modal('hide');
 
             $.ajax({
                 type: 'POST' ,
-                url: '/role/delete' ,
+                url: '/access/delete' ,
                 data: JSON.stringify({
                     id : id
                 }) ,
@@ -228,7 +229,7 @@ function modify(id) {
 
     $.ajax({
         type: 'POST' ,
-        url: '/role/getById' ,
+        url: '/access/getById' ,
         data: JSON.stringify({
             id : id
         }) ,
@@ -238,12 +239,12 @@ function modify(id) {
             if (res.code != 200) {
                 toastr.error(res.msg);
             } else {
-                $('#edit-role-name').val(res.data.name);
-                $('#edit-role-id').val(res.data.id);
+                $('#edit-access-name').val(res.data.name);
+                $('#edit-access-id').val(res.data.id);
                 if (res.data.status) {
-                    $("input[name='edit-role-status'][value='1']").attr("checked",true);
+                    $("input[name='edit-access-status'][value='1']").attr("checked",true);
                 } else {
-                    $("input[name='edit-role-status'][value='0']").attr("checked",true);
+                    $("input[name='edit-access-status'][value='0']").attr("checked",true);
                 }
 
                 $('#editModal').modal('show');
@@ -252,11 +253,7 @@ function modify(id) {
     });
 }
 
-function deleteRole(id) {
-    $('#delete-role-id').val(id);
+function deleteAccess(id) {
+    $('#delete-access-id').val(id);
     $('#delcfmModel').modal('show');
-}
-
-function setAccess(id) {
-
 }

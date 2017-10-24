@@ -91,7 +91,9 @@ $(function () {
                        'onclick="modify(\'' + id + '\')">' + '编辑' +
                        '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
                        '<button class="btn btn-xs btn-danger" ' +
-                       'onclick="deleteRole(\'' + id + '\')">' + '删除' + '</button>';
+                       'onclick="deleteRole(\'' + id + '\')">' + '删除' + '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
+                       '<button class="btn btn-xs btn-default" ' +
+                       'onclick="setAccess(\'' + id + '\')">' + '设置权限' + '</button>';
                }
            }]
        });
@@ -253,4 +255,8 @@ function modify(id) {
 function deleteRole(id) {
     $('#delete-role-id').val(id);
     $('#delcfmModel').modal('show');
+}
+
+function setAccess(id) {
+
 }
