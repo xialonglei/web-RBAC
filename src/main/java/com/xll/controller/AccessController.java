@@ -1,7 +1,5 @@
 package com.xll.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.xll.annotation.SystemLog;
 import com.xll.enums.PageEnum;
 import com.xll.enums.ResponseEnum;
@@ -36,7 +34,7 @@ public class AccessController {
     @RequestMapping(value = "/getAccessList" , method = RequestMethod.POST)
     @ResponseBody
     public BootstrapTablePage<Access> getRoleList(@RequestBody BootstrapTablePage bootstrapTablePage) {
-        int total = accessService.countRole();
+        int total = accessService.countAccess();
         List<Access> accessList = accessService.getAccessListByPage(bootstrapTablePage.getLimit()
                 , bootstrapTablePage.getOffset());
         bootstrapTablePage.setRows(accessList);
@@ -133,6 +131,29 @@ public class AccessController {
         return new GeneralResponse<>(ResponseEnum.UPDATE_SUCCESS.getName() , ResponseEnum.UPDATE_SUCCESS.getCode());
 
     }
+
+    @SystemLog(description = "获取所有权限")
+    @ResponseBody
+    @RequestMapping(value = "/getAllAccess" , method = RequestMethod.GET)
+    public GeneralResponse<List<Access>> getAllAccess(HttpServletRequest request) {
+
+       List<Access> accessList = accessService.getAllAccess();
+
+       if (accessList == null || accessList.size() == 0) {
+           return new GeneralResponse<>(ResponseEnum.SELECT_FAIL.getName() , ResponseEnum.SELECT_FAIL.getCode());
+       }
+
+       GeneralResponse generalResponse = new GeneralResponse();
+
+       generalResponse.setData(accessList);
+       generalResponse.setMsg(ResponseEnum.SELECT_SUCCESS.getName());
+       generalResponse.setCode(ResponseEnum.SELECT_SUCCESS.getCode());
+
+       return generalResponse;
+
+    }
+
+
 
 
 }

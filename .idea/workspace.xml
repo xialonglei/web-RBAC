@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="618191b9-56f5-4c8a-9a25-25e79c63b023" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xll/controller/AccessController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xll/service/impl/AccessServiceImpl.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xll/enums/ResponseEnum.class" afterPath="$PROJECT_DIR$/target/classes/com/xll/enums/ResponseEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xll/controller/AccessController.class" afterPath="$PROJECT_DIR$/target/classes/com/xll/controller/AccessController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xll/service/AccessService.class" afterPath="$PROJECT_DIR$/target/classes/com/xll/service/AccessService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xll/service/impl/AccessServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xll/service/impl/AccessServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/controller/AccessController.class" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/controller/AccessController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/enums/ResponseEnum.class" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/enums/ResponseEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/service/AccessService.class" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/service/AccessService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/service/impl/AccessServiceImpl.class" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/classes/com/xll/service/impl/AccessServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_RBAC_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_RBAC_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/controller/AccessController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/controller/AccessController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/model/AccessExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/model/AccessExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/model/UserExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/model/UserExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/mapper/RoleAccessMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/mapper/RoleAccessMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/service/AccessService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/service/AccessService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/access-mgmt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/access-mgmt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/jsp/access-mgmt.jsp" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/jsp/access-mgmt.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/jsp/role-mgmt.jsp" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/jsp/role-mgmt.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/logs/info.log" afterPath="$PROJECT_DIR$/target/web-RBAC/WEB-INF/logs/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/resources/js/access-mgmt.js" afterPath="$PROJECT_DIR$/target/web-RBAC/resources/js/access-mgmt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-RBAC.iml" afterPath="$PROJECT_DIR$/web-RBAC.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web-RBAC/resources/js/role-mgmt.js" afterPath="$PROJECT_DIR$/target/web-RBAC/resources/js/role-mgmt.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,59 +40,45 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AccessServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java">
+      <file leaf-file-name="role-mgmt.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2537#2559#0" expanded="true" />
-                <element signature="e#2874#2875#0" expanded="true" />
-                <element signature="e#2941#2942#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="179">
+              <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="role-mgmt.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="212" column="44" lean-forward="true" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
               <folding>
-                <element signature="e#2959#2960#0" expanded="true" />
-                <element signature="e#3012#3013#0" expanded="true" />
+                <marker date="1508986462330" expanded="true" signature="2340:2346" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2346:2352" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2352:2358" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2358:2364" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2785:2791" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2791:2797" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2797:2803" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2803:2809" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2961:2967" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2967:2973" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2973:2979" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="2979:2985" ph="&amp;nbsp;" />
+                <marker date="1508986462330" expanded="true" signature="8921:8963" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="access-mgmt.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp">
+      <file leaf-file-name="RoleAccessController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/RoleAccessController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccessController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/AccessController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+            <state relative-caret-position="264">
+              <caret line="97" column="46" lean-forward="true" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,11 +86,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java">
+      <file leaf-file-name="MethodProxy.class" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/repository/maven/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="148">
+              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AspectJAfterAdvice.class" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/repository/maven/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/aspectj/AspectJAfterAdvice.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="30" column="84" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -122,8 +119,31 @@
       <file leaf-file-name="AccessService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/AccessService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="23">
+              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="131" column="43" lean-forward="false" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
+              <folding>
+                <element signature="e#3358#3359#0" expanded="true" />
+                <element signature="e#3427#3428#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleAccessService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/RoleAccessService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,41 +151,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/RoleController.java">
+      <file leaf-file-name="RoleAccessServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleAccessServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-327">
-              <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="access-mgmt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/access-mgmt.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            <state relative-caret-position="259">
+              <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
               <folding>
-                <marker date="1508834446272" expanded="true" signature="2422:2428" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2428:2434" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2434:2440" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2440:2446" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2823:2829" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2829:2835" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2835:2841" ph="&amp;nbsp;" />
-                <marker date="1508834446272" expanded="true" signature="2841:2847" ph="&amp;nbsp;" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1325#1326#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -189,6 +186,7 @@
       <find>BaseResultMap</find>
       <find>mehod</find>
       <find>role</find>
+      <find>close</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,10 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login-hint.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/rbac.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xll/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xll/enums/PageEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/util/DataOption.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/model/RoleExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/util/BootstrapTablePage.java" />
@@ -229,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/spring-bean.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/util/GeneralResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/service/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleServiceImpl.java" />
@@ -241,8 +234,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xll/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/aop/SystemLogAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user-mgmt.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/mapper/AccessMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/AccessMapper.xml" />
@@ -255,9 +246,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/access-mgmt.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user-mgmt.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/service/AccessService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xll/controller/AccessController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xll/mapper/RoleAccessMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xll/service/RoleAccessService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xll/controller/RoleAccessController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleAccessServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -284,7 +282,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -303,7 +301,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -952,8 +952,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1495,21 +1493,25 @@
       <workItem from="1508372648760" duration="14558000" />
       <workItem from="1508459092428" duration="4700000" />
       <workItem from="1508720067539" duration="8292000" />
-      <workItem from="1508806708787" duration="15730000" />
+      <workItem from="1508806708787" duration="16315000" />
+      <workItem from="1508893587126" duration="4597000" />
+      <workItem from="1508900233109" duration="1164000" />
+      <workItem from="1508935124088" duration="2083000" />
+      <workItem from="1508978702940" duration="6464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157890000" />
+    <option name="totallyTimeSpent" value="172783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32026145" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12091503" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1518,9 +1520,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27941176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23856209" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35457516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3529412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1528,10 +1530,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17810458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2572079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50980395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1539,6 +1540,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1584,7 +1586,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1593,121 +1595,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/model/UserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/maven/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar!/org/springframework/web/util/Log4jConfigListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/web-RBAC/WEB-INF/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/web-RBAC/WEB-INF/logs/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/annotation/SystemLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/util/BootstrapTablePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/util/GeneralResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/RoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/maven/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6001">
-          <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/maven/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/aop/SystemLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5068#5069#0" expanded="false" />
-            <element signature="e#5136#5137#0" expanded="false" />
-            <element signature="e#5679#5680#0" expanded="false" />
-            <element signature="e#5747#5748#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/jquery-ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1723,57 +1610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user-mgmt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6630">
-          <caret line="390" column="5" lean-forward="false" selection-start-line="379" selection-start-column="3" selection-end-line="390" selection-end-column="5" />
-          <folding>
-            <marker date="1508466315466" expanded="true" signature="2792:2798" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="2798:2804" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="2804:2810" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="2810:2816" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="3200:3206" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="3206:3212" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="3212:3218" ph="&amp;nbsp;" />
-            <marker date="1508466315466" expanded="true" signature="3218:3224" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/enums/PageEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="95" column="69" lean-forward="false" selection-start-line="95" selection-start-column="69" selection-end-line="95" selection-end-column="69" />
-          <folding>
-            <marker date="1508748145957" expanded="true" signature="2340:2346" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2346:2352" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2352:2358" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2358:2364" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2741:2747" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2747:2753" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2753:2759" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2759:2765" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2917:2923" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2923:2929" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2929:2935" ph="&amp;nbsp;" />
-            <marker date="1508748145957" expanded="true" signature="2935:2941" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/mapper/AccessMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1800,30 +1640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user-mgmt.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/rbac.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1847,27 +1663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="121" column="17" lean-forward="true" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1875,7 +1674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1907,7 +1705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1915,7 +1712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1923,6 +1719,112 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/model/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7882">
+          <caret line="128" column="23" lean-forward="false" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/aop/SystemLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1153">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-303">
+          <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/enums/PageEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/OperateLogInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/OperateLogInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/util/BootstrapTablePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/util/GeneralResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-643">
+          <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1935,34 +1837,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/model/UserExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user-mgmt.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7882">
-          <caret line="128" column="23" lean-forward="false" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/maven/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/access-mgmt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <marker date="1508834446272" expanded="true" signature="2422:2428" ph="&amp;nbsp;" />
             <marker date="1508834446272" expanded="true" signature="2428:2434" ph="&amp;nbsp;" />
@@ -1976,78 +1862,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/enums/ResponseEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/toastr.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/RoleController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-327">
-          <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+        <state relative-caret-position="51">
+          <caret line="126" column="35" lean-forward="false" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/access-mgmt.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
-          <folding>
-            <element signature="e#2959#2960#0" expanded="true" />
-            <element signature="e#3012#3013#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/AccessController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="2040">
+          <caret line="137" column="42" lean-forward="false" selection-start-line="137" selection-start-column="42" selection-end-line="137" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user-mgmt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5831">
+          <caret line="343" column="25" lean-forward="false" selection-start-line="343" selection-start-column="25" selection-end-line="343" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1508466315466" expanded="true" signature="2792:2798" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="2798:2804" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="2804:2810" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="2810:2816" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="3200:3206" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="3206:3212" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="3212:3218" ph="&amp;nbsp;" />
+            <marker date="1508466315466" expanded="true" signature="3218:3224" ph="&amp;nbsp;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/mapper/RoleAccessMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/RoleAccessMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="40" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding>
+            <marker date="1507620480287" expanded="true" signature="2424:2531" ph="select from role_access" />
+            <marker date="1507620480287" expanded="true" signature="2618:2679" ph="delete from " />
+            <marker date="1507620480287" expanded="true" signature="2761:3011" ph="insert into role_access... " />
+            <marker date="1507620480287" expanded="true" signature="4144:4176" ph="select count... role_access" />
+            <marker date="1507620480287" expanded="true" signature="4372:4852" ph="update role_... " />
+            <marker date="1507620480287" expanded="true" signature="4946:5203" ph="update role_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/rbac.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="84" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/AccessService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="23">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/maven/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/repository/maven/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/aspectj/AspectJAfterAdvice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="131" column="43" lean-forward="false" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
+          <folding>
+            <element signature="e#3358#3359#0" expanded="true" />
+            <element signature="e#3427#3428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role-mgmt.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="125" column="62" lean-forward="true" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/role-mgmt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="212" column="44" lean-forward="true" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
+          <folding>
+            <marker date="1508986462330" expanded="true" signature="2340:2346" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2346:2352" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2352:2358" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2358:2364" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2785:2791" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2791:2797" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2797:2803" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2803:2809" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2961:2967" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2967:2973" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2973:2979" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="2979:2985" ph="&amp;nbsp;" />
+            <marker date="1508986462330" expanded="true" signature="8921:8963" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/controller/RoleAccessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="97" column="46" lean-forward="true" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/AccessServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/RoleAccessService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="238">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2537#2559#0" expanded="true" />
-            <element signature="e#2874#2875#0" expanded="true" />
-            <element signature="e#2941#2942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xll/service/impl/RoleAccessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
           </folding>
         </state>
       </provider>

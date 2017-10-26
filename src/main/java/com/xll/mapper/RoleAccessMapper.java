@@ -2,8 +2,11 @@ package com.xll.mapper;
 
 import com.xll.model.RoleAccess;
 import com.xll.model.RoleAccessExample;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
+@Repository("roleAccessDao")
 public interface RoleAccessMapper {
     int countByExample(RoleAccessExample example);
 

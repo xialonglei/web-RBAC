@@ -23,7 +23,7 @@ public class AccessServiceImpl implements AccessService {
     private AccessMapper accessDao;
 
     @Override
-    public int countRole() {
+    public int countAccess() {
 
         return accessDao.countByExample(new AccessExample());
     }
@@ -130,5 +130,10 @@ public class AccessServiceImpl implements AccessService {
     public int update(Access access) {
         convertToJson(access);
         return accessDao.updateByPrimaryKeySelective(access);
+    }
+
+    @Override
+    public List<Access> getAllAccess() {
+        return accessDao.selectByExample(new AccessExample());
     }
 }

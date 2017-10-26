@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface AccessService {
 
-    int countRole();
+    int countAccess();
 
     List<Access> getAccessListByPage(int limit, int offset);
 
@@ -22,4 +22,6 @@ public interface AccessService {
     Access getAccessById(Access access);
 
     int update(Access access);
+
+    List<Access> getAllAccess();
 }

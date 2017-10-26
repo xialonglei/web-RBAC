@@ -87,19 +87,25 @@ $(function () {
 
                formatter:function (value , row , index) {
                    var id = row.id;
+                   var roleName = row.name;
                    return '<button class="btn btn-xs btn-blue" ' +
                        'onclick="modify(\'' + id + '\')">' + '编辑' +
                        '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
                        '<button class="btn btn-xs btn-danger" ' +
                        'onclick="deleteRole(\'' + id + '\')">' + '删除' + '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
                        '<button class="btn btn-xs btn-default" ' +
-                       'onclick="setAccess(\'' + id + '\')">' + '设置权限' + '</button>';
+                       'onclick="setAccess(\'' + id + '\',\'' + roleName + '\')">' + '设置权限' + '</button>';
                }
            }]
        });
     };
 
     function initClick() {
+
+        $('.close-btn').click(function () {
+            $('.access-modal-body').empty();
+            $('.set-access-title').empty();
+        });
 
         $('.add-role').click(function () {
 
@@ -193,6 +199,37 @@ $(function () {
 
         });
 
+        $('.role-access').click(function () {
+            var roleId = $('#role-id').val();
+            var inputs = $("input[name='access']");
+
+            var accessIds = new Array();
+            for(var k in inputs){
+                if(inputs[k].checked)
+                    accessIds.push(inputs[k].value);
+            }
+
+            $('#accessModel').modal('hide');
+            $('.access-modal-body').empty();
+
+            $.ajax({
+                type: 'POST' ,
+                url: '/role_access/setAccess' ,
+                data: {
+                    roleId : roleId ,
+                    accessIds : accessIds
+                } ,
+                dataType: 'json' ,
+                success: function (res) {
+                    if (res.code != 200) {
+                        toastr.error(res.msg);
+                    } else {
+                        toastr.info(res.msg);
+                    }
+                }
+            });
+        });
+
     }
 
     function initModal() {
@@ -257,6 +294,50 @@ function deleteRole(id) {
     $('#delcfmModel').modal('show');
 }
 
-function setAccess(id) {
+function setAccess(id , roleName) {
 
+    $('.set-access-title').prop('innerHTML', '设置 <span style="color:red;font-size:16px;font-weight: bold">' + roleName + '</span> 权限');
+    $('#role-id').val(id);
+    $('#accessModel').modal('show');
+
+    $.ajax({
+        type: 'GET' ,
+        url: '/access/getAllAccess' ,
+        dataType: 'json' ,
+        success: function (res) {
+            if (res.code != 200) {
+
+                toastr.error(res.msg);
+
+            } else {
+
+                var accessList = res.data;
+
+                $.ajax({
+                    type: 'POST' ,
+                    url: '/role_access/getAccessIdsByRoleId' ,
+                    dataType: 'json' ,
+                    data: {roleId : id} ,
+                    success: function (res) {
+
+                        var accessIds = res.data;
+
+                        for (var index in accessList) {
+
+                            var accessId = accessList[index].id;
+                            var title = accessList[index].title;
+
+                            if ($.inArray(accessId , accessIds) != -1) {
+                                $('.access-modal-body').append('<div><input type="checkbox" checked name="access" value="' + accessId + '"> ' + title + '</div>');
+                            } else {
+                                $('.access-modal-body').append('<div><input type="checkbox" name="access" value="' + accessId + '"> ' + title + '</div>');
+
+                            }
+                        }
+
+                    }
+                });
+            }
+        }
+    });
 }

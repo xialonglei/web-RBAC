@@ -101,7 +101,6 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                         <h4 class="modal-title">提示信息</h4>
                     </div>
                     <div class="modal-body">
@@ -115,6 +114,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- 设置权限弹出层 modal -->
+        <div class="modal fade" id="accessModel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title set-access-title"></h4>
+                    </div>
+                    <input type="hidden" id="role-id"/>
+                    <div class="modal-body access-modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default close-btn" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary role-access">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
     </body>
