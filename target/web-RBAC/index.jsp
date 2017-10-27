@@ -13,10 +13,12 @@
         <link rel="stylesheet" type="text/css" href="/resources/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="/resources/bootstrap/css/bootstrap-grid.min.css" />
         <link rel="stylesheet" type="text/css" href="/resources/bootstrap/css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/bootstrap/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="/resources/css/dashboard.css" />
         <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.min.css" />
         <script type="text/javascript" src="/resources/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/resources/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/resources/bootstrap/js/bootstrap-select.min.js"></script>
         <script type="text/javascript" src="/resources/jquery/jquery-ui.min.js"></script>
     </head>
     <body>

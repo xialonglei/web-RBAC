@@ -124,4 +124,19 @@ public class RoleController {
     }
 
 
+    @RequestMapping(value = "/getAll" , method = RequestMethod.GET)
+    @ResponseBody
+    public GeneralResponse<List<Role>> getAll(HttpServletRequest request) {
+
+        List<Role> roleList = roleService.getAll();
+
+        GeneralResponse generalResponse = new GeneralResponse();
+        generalResponse.setMsg(ResponseEnum.SELECT_SUCCESS.getName());
+        generalResponse.setCode(ResponseEnum.SELECT_SUCCESS.getCode());
+        generalResponse.setData(roleList);
+
+        return generalResponse;
+    }
+
+
 }

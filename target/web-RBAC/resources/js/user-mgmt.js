@@ -118,6 +118,32 @@ $(function () {
 
     function initClick() {
 
+        $('#role-select-1').on('show.bs.select' , function () {
+           $.ajax({
+               type: 'GET' ,
+               url: '/role/getAll' ,
+               dataType: 'json' ,
+               success: function (res) {
+                   if (res.code != 200) {
+                       toastr.error(res.msg);
+                   } else {
+                       $('#role-select-1').append('<option value="0">请选择</option>');
+                        for (var index in res.data) {
+                            var role = res.data[index];
+                            var id = role.id;
+                            var name = role.name;
+                            $('#role-select-1').append("<option value='" + id + "'>" + name + "</option>");
+                        }
+                       $('.selectpicker').selectpicker('refresh');
+                   }
+               }
+           });
+        });
+
+        $('#role-select-1').on('hide.bs.select' , function () {
+           $('#role-select-1').empty();
+        });
+
         $('.add-user').click(function () {
 
             if (!insertCheck) {

@@ -25,4 +25,6 @@ public interface RoleService {
     int delete(Role role);
 
     Role getRoleByNameAndStatus(Role role);
+
+    List<Role> getAll();
 }

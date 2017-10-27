@@ -98,4 +98,14 @@ public class RoleServiceImpl implements RoleService {
 
         return roleList.get(0);
     }
+
+    @Override
+    public List<Role> getAll() {
+        List<Role> roleList = roleDao.selectByExample(new RoleExample());
+
+        if (roleList == null) {
+            return Collections.emptyList();
+        }
+        return roleList;
+    }
 }

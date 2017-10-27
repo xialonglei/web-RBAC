@@ -2,7 +2,6 @@ package com.xll.controller;
 
 import com.xll.annotation.SystemLog;
 import com.xll.enums.ResponseEnum;
-import com.xll.model.Role;
 import com.xll.model.RoleAccess;
 import com.xll.service.RoleAccessService;
 import com.xll.util.GeneralResponse;
@@ -62,9 +61,9 @@ public class RoleAccessController {
     @RequestMapping("setAccess")
     @ResponseBody
     public  GeneralResponse<List<Integer>> setAccess(HttpSession session , @RequestParam Integer roleId
-            , @RequestParam("accessIds[]") Integer[] accessArray) {
+            , @RequestParam(value = "accessIds[]" , required = false) Integer[] accessArray) {
 
-        List<Integer> accessIds = Arrays.asList(accessArray);
+        List<Integer> accessIds = (accessArray == null) ? Collections.EMPTY_LIST : Arrays.asList(accessArray);
 
         List<RoleAccess> roleAccessList = roleAccessService.getRoleAccessListByRoleId(roleId);
 

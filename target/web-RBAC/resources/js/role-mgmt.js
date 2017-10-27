@@ -205,8 +205,9 @@ $(function () {
 
             var accessIds = new Array();
             for(var k in inputs){
-                if(inputs[k].checked)
+                if(inputs[k].checked) {
                     accessIds.push(inputs[k].value);
+                }
             }
 
             $('#accessModel').modal('hide');

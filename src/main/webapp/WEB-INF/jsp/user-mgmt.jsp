@@ -68,6 +68,14 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <div class="row set-role">
+                                <label class="control-label col-sm-3">设置角色</label>
+                                <select id="role-select-1" class="col-sm-8 form-control selectpicker show-tick" data-live-search="true">
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="modal-footer">
