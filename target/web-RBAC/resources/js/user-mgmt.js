@@ -10,6 +10,10 @@ $(function () {
 
     var updateCheck = true;
 
+    var roles = {};
+
+    initRoles();
+
     initToastr();
 
     initTable();
@@ -19,6 +23,36 @@ $(function () {
     initEvent();
 
     initModal();
+
+    function initRoles() {
+        $.ajax({
+            type: 'GET' ,
+            url: '/role/getAll' ,
+            dataType: 'json' ,
+            success: function (res) {
+                if (res.code != 200) {
+                    toastr.error(res.msg);
+                } else {
+                    var roles = res.data;
+
+
+                    $('#role-select-1').append('<option value="0">请选择</option>');
+                    $('#role-select-2').append('<option value="0">请选择</option>');
+                    for (var index in roles) {
+                        var role = roles[index];
+                        var id = role.id;
+                        var name = role.name;
+                        $('#role-select-1').append("<option value='" + id + "'>" + name + "</option>");
+                        $('#role-select-2').append("<option value='" + id + "'>" + name + "</option>");
+                    }
+
+
+                    $('.selectpicker').selectpicker('refresh');
+                }
+            }
+        });
+    }
+
     
     function initToastr() {
         toastr.options = {
@@ -55,19 +89,16 @@ $(function () {
                field: 'state',
                checkbox: true
            },{
-               field: 'id' ,
-               title: '用户ID' ,
-               formatter: function (value, row, index) {
-                   return row.id;
-               }
+               field: 'user.id' ,
+               title: '用户ID'
            },{
-               field: 'name',
+               field: 'user.name',
                title: '用户名'
            },{
-               field: 'email',
+               field: 'user.email',
                title: '邮箱'
            },{
-               field: 'isAdmin',
+               field: 'user.isAdmin',
                title: '管理员',
                formatter:function (value , row , index) {
                    if (value) {
@@ -77,7 +108,7 @@ $(function () {
                    }
                }
            },{
-               field: 'status',
+               field: 'user.status',
                title: '用户状态' ,
                formatter:function(value , row , index) {
                    if (value) {
@@ -88,14 +119,17 @@ $(function () {
 
                }
            },{
-               field:'createTime',
+               field: 'roleName',
+               title: '所属角色'
+           },{
+               field:'user.createTime',
                title:'创建日期',
                formatter:function (value , row , index) {
                    return formatDate(value);
                }
 
            }, {
-               field: 'updateTime',
+               field: 'user.updateTime',
                title: '更新日期',
                formatter:function (value , row , index) {
                    return formatDate(value);
@@ -105,7 +139,7 @@ $(function () {
                '<button class="btn btn-xs btn-blue" data-toggle="modal" data-target="#addModal">添加</button>',
 
                formatter:function (value , row , index) {
-                   var id = row.id;
+                   var id = row.user.id;
                    return '<button class="btn btn-xs btn-sm btn-blue" ' +
                        'onclick="modify(\'' + id + '\')">' + '编辑' +
                        '</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
@@ -117,31 +151,11 @@ $(function () {
     };
 
     function initClick() {
-
-        $('#role-select-1').on('show.bs.select' , function () {
-           $.ajax({
-               type: 'GET' ,
-               url: '/role/getAll' ,
-               dataType: 'json' ,
-               success: function (res) {
-                   if (res.code != 200) {
-                       toastr.error(res.msg);
-                   } else {
-                       $('#role-select-1').append('<option value="0">请选择</option>');
-                        for (var index in res.data) {
-                            var role = res.data[index];
-                            var id = role.id;
-                            var name = role.name;
-                            $('#role-select-1').append("<option value='" + id + "'>" + name + "</option>");
-                        }
-                       $('.selectpicker').selectpicker('refresh');
-                   }
-               }
-           });
-        });
-
-        $('#role-select-1').on('hide.bs.select' , function () {
-           $('#role-select-1').empty();
+        $('#role-select-1 , #role-select-2').on('changed.bs.select	' , function (event, clickedIndex) {
+            var roleId = event.delegateTarget.options[clickedIndex].value;
+            //设置属性
+            $('button[data-id=role-select-1] .filter-option').attr("value" , roleId);
+            $('button[data-id=role-select-2] .filter-option').attr("value" , roleId);
         });
 
         $('.add-user').click(function () {
@@ -168,16 +182,28 @@ $(function () {
 
             $('#addModal').modal('hide');
 
+            var user = {
+                name : userName ,
+                status : status == 1 ? true : false ,
+                email : email ,
+                isAdmin : isAdmin == 1 ? true : false
+            };
+
+            var roleId =  $('button[data-id=role-select-1] .filter-option').attr("value");
+
+            if (roleId == "0" || roleId == undefined || roleId == null) {
+                toastr.warning('请选择用户角色！');
+                return;
+            }
+
             $.ajax({
                 type: 'POST' ,
                 url: '/user/add' ,
                 data: JSON.stringify({
-                    name : userName ,
-                    status : status == 1 ? true : false ,
-                    email : email ,
-                    isAdmin : isAdmin == 1 ? true : false
+                    user : user ,
+                    roleId : roleId
                 }) ,
-                contentType : 'application/json' ,
+                contentType: "application/json" ,
                 dataType: 'json' ,
                 success: function (res) {
                     if (res.code != 200) {
@@ -202,6 +228,18 @@ $(function () {
             var id = $('#edit-user-id').val();
             var isAdmin = $("input[name='edit-is-admin']:checked").val();
             var email = $('#edit-user-email').val();
+            var userRoleId = $('#edit-user-role-id').val();
+            var roleId =  $('button[data-id=role-select-2] .filter-option').attr("value");
+            var roleName =  $('button[data-id=role-select-2] .filter-option').text();
+
+
+            var user = {
+                id : id ,
+                name : name ,
+                status : status == 1 ? true : false ,
+                isAdmin : isAdmin == 1 ? true : false ,
+                email : email
+            };
 
             if (name == undefined || name == "") {
                 toastr.warning("用户名不能为空!");
@@ -222,11 +260,10 @@ $(function () {
                 type: 'POST' ,
                 url: '/user/update' ,
                 data: JSON.stringify({
-                    id : id ,
-                    name : name ,
-                    status : status == 1 ? true : false ,
-                    isAdmin : isAdmin == 1 ? true : false ,
-                    email : email
+                    user : user,
+                    userRoleId : userRoleId ,
+                    roleId : roleId ,
+                    roleName : roleName
                 }) ,
                 contentType : 'application/json' ,
                 dataType: 'json' ,
@@ -451,9 +488,12 @@ function modify(id) {
             if (res.code != 200) {
                 toastr.error(res.msg);
             } else {
-                $('#edit-user-name').val(res.data.name);
-                $('#edit-user-email').val(res.data.email);
-                $('#edit-user-id').val(res.data.id);
+                $('#edit-user-name').val(res.data.user.name);
+                $('#edit-user-email').val(res.data.user.email);
+                $('#edit-user-id').val(res.data.user.id);
+                $('#edit-user-role-id').val(res.data.userRoleId);
+                $('button[data-id=role-select-2] .filter-option').html(res.data.roleName);
+                $('button[data-id=role-select-2] .filter-option').attr("value" , res.data.roleId);
                 if (res.data.status) {
                     $("input[name='edit-user-status'][value='1']").attr("checked",true);
                 } else {

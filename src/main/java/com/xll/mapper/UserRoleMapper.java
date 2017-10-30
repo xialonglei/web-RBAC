@@ -2,8 +2,11 @@ package com.xll.mapper;
 
 import com.xll.model.UserRole;
 import com.xll.model.UserRoleExample;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
+@Repository("userRoleDao")
 public interface UserRoleMapper {
     int countByExample(UserRoleExample example);
 
@@ -20,4 +23,6 @@ public interface UserRoleMapper {
     int updateByPrimaryKeySelective(UserRole record);
 
     int updateByPrimaryKey(UserRole record);
+
+    int deleteByUserId(Integer uid);
 }

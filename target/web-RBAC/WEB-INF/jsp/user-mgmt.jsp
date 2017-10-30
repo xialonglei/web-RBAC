@@ -104,6 +104,7 @@
                         </div>
 
                         <input type="hidden" id="edit-user-id" />
+                        <input type="hidden" id="edit-user-role-id"/>
 
                         <div class="form-group">
                             <div class="row">
@@ -134,6 +135,14 @@
                                 <label class="radio-inline col-xs-4 col-sm-4">
                                     <input type="radio" name="edit-user-status" value="0">无效
                                 </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row set-role">
+                                <label class="control-label col-sm-3">设置角色</label>
+                                <select id="role-select-2" class="col-sm-8 form-control selectpicker show-tick" data-live-search="true">
+                                </select>
                             </div>
                         </div>
 

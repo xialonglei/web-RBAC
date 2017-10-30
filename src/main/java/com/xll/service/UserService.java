@@ -17,7 +17,7 @@ public interface UserService {
 
     User getUserByNameOrEmail(User user);
 
-    int insert(User user);
+    Integer insert(User user);
 
     User getByName(String name);
 

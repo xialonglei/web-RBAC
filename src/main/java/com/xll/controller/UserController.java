@@ -1,10 +1,14 @@
 package com.xll.controller;
 
 import com.xll.annotation.SystemLog;
+import com.xll.dto.UserDTO;
 import com.xll.enums.PageEnum;
 import com.xll.enums.ResponseEnum;
 import com.xll.model.Role;
 import com.xll.model.User;
+import com.xll.model.UserRole;
+import com.xll.service.RoleService;
+import com.xll.service.UserRoleService;
 import com.xll.service.UserService;
 import com.xll.util.BootstrapTablePage;
 import com.xll.util.GeneralResponse;
@@ -18,6 +22,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,6 +37,12 @@ public class UserController {
 
     @Resource
     private UserService userService;
+
+    @Resource
+    private UserRoleService userRoleService;
+
+    @Resource
+    private RoleService roleService;
 
     @SystemLog(description = "伪登录")
     @RequestMapping(value = "/vlogin" , method = RequestMethod.GET)
@@ -57,7 +68,20 @@ public class UserController {
         int total = userService.countUser();
         List<User> userList = userService.getUserListByPage(bootstrapTablePage.getLimit()
                 , bootstrapTablePage.getOffset());
-        bootstrapTablePage.setRows(userList);
+
+        List<UserDTO> userDTOList = new ArrayList<>();
+
+        for (User user : userList) {
+            UserDTO userDTO = new UserDTO();
+            UserRole userRole = userRoleService.getByUserId(user.getId());
+            Role role = new Role();
+            role.setId(userRole.getRoleId());
+            String roleName = roleService.getRoleById(role).getName();
+            userDTO.setUser(user);
+            userDTO.setRoleName(roleName);
+            userDTOList.add(userDTO);
+        }
+        bootstrapTablePage.setRows(userDTOList);
         bootstrapTablePage.setTotal(total);
         return bootstrapTablePage;
     }
@@ -72,9 +96,13 @@ public class UserController {
     @SystemLog(description = "添加用户")
     @ResponseBody
     @RequestMapping(value = "/add" , method = RequestMethod.POST)
-    public GeneralResponse<Integer> add(HttpServletRequest request , @RequestBody User user) {
+    public GeneralResponse<Integer> add(HttpServletRequest request , @RequestBody UserDTO userDTO) {
 
-        LOG.info("插入用户数据为[用户名：{}，用户邮箱：{}]" , user.getName() , user.getEmail());
+        User user = userDTO.getUser();
+
+        Integer roleId = userDTO.getRoleId();
+
+        LOG.info("插入用户数据为[用户名：{}，用户邮箱：{}，角色ID：{}]" , user.getName() , user.getEmail() , roleId);
 
         User result = userService.getUserByNameOrEmail(user);
 
@@ -83,7 +111,13 @@ public class UserController {
                     , ResponseEnum.INSERT_NAME_OR_EMAIL_DUPLICATION.getCode());
         }
 
-        int count = userService.insert(user);
+        Integer count = userService.insert(user);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.INSERT_FAIL.getName() , ResponseEnum.INSERT_FAIL.getCode());
+        }
+
+        count = userRoleService.insert(user.getId() , roleId);
 
         if (count == 0) {
             return new GeneralResponse<>(ResponseEnum.INSERT_FAIL.getName() , ResponseEnum.INSERT_FAIL.getCode());
@@ -130,17 +164,30 @@ public class UserController {
 
         User result = userService.getById(id);
 
+        UserRole userRole = userRoleService.getByUserId(id);
+
+        Role tempRole = new Role();
+        tempRole.setId(userRole.getRoleId());
+        Role role = roleService.getRoleById(tempRole);
+
+
         GeneralResponse generalResponse = new GeneralResponse();
 
-        if (result == null) {
+        if (result == null || userRole == null || role == null) {
             generalResponse.setCode(ResponseEnum.SELECT_FAIL.getCode());
             generalResponse.setMsg(ResponseEnum.SELECT_FAIL.getName());
             return generalResponse;
         }
 
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUser(result);
+        userDTO.setRoleId(userRole.getRoleId());
+        userDTO.setRoleName(role.getName());
+        userDTO.setUserRoleId(userRole.getId());
+
         generalResponse.setCode(ResponseEnum.SELECT_SUCCESS.getCode());
         generalResponse.setMsg(ResponseEnum.SELECT_SUCCESS.getName());
-        generalResponse.setData(result);
+        generalResponse.setData(userDTO);
 
         return generalResponse;
 
@@ -182,11 +229,19 @@ public class UserController {
     @SystemLog(description = "更新用户")
     @ResponseBody
     @RequestMapping(value = "/update" , method = RequestMethod.POST)
-    public GeneralResponse<Integer> update(HttpServletRequest request , @RequestBody User user) {
+    public GeneralResponse<Integer> update(HttpServletRequest request , @RequestBody UserDTO userDTO) {
 
-        int count = userService.update(user);
+        User user = userDTO.getUser();
+        int userInsertCount = userService.update(user);
 
-        if (count == 0) {
+        UserRole userRole = new UserRole();
+        userRole.setId(userDTO.getUserRoleId());
+        userRole.setRoleId(userDTO.getRoleId());
+
+        int userRoleUpdateCount = userRoleService.update(userRole);
+
+
+        if (userInsertCount == 0 || userRoleUpdateCount == 0) {
             return new GeneralResponse<>(ResponseEnum.UPDATE_FAIL.getName() , ResponseEnum.UPDATE_FAIL.getCode());
         }
 
@@ -199,7 +254,15 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/delete" , method = RequestMethod.POST)
     public GeneralResponse<Integer> delete(HttpServletRequest request , @RequestParam Integer id) {
+
         int count = userService.delete(id);
+
+        if (count == 0) {
+            return new GeneralResponse<>(ResponseEnum.DELETE_FAIL.getName() , ResponseEnum.DELETE_FAIL.getCode());
+        }
+
+        // 删除用户和角色的关系
+        count = userRoleService.deleteByUserId(id);
 
         if (count == 0) {
             return new GeneralResponse<>(ResponseEnum.DELETE_FAIL.getName() , ResponseEnum.DELETE_FAIL.getCode());
@@ -207,9 +270,5 @@ public class UserController {
 
         return new GeneralResponse<>(ResponseEnum.DELETE_SUCCESS.getName() , ResponseEnum.DELETE_SUCCESS.getCode());
     }
-
-
-
-
 
 }

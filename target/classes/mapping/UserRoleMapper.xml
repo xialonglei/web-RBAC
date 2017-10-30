@@ -65,6 +65,10 @@
     delete from user_role
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteByUserId" parameterType="java.lang.Integer" >
+    delete from user_role
+    where uid = #{uid,jdbcType=INTEGER}
+  </delete>
   <insert id="insert" parameterType="com.xll.model.UserRole" >
     insert into user_role (id, uid, role_id, 
       create_time, update_time)
